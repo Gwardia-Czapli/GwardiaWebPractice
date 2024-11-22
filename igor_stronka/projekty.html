@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Grafiki\world-wide-web.png" />
+    <title>:></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ZEGAR -->
+    <div id="clock"></div>
+
+    <script>
+      const clock = document.querySelector("#clock");
+
+      function updateClock() {
+        const date = new Date();
+        clock.textContent = date.toLocaleTimeString("en-GB", {
+          timeZone: "Europe/Paris",
+        });
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+
+    <!-- MENU-HAMBURGER -->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html"><li>Strona Główna</li></a>
+          <a href="o-mnie.html"><li>O mnie</li></a>
+          <a href="kontakt.html"><li>Kontakt</li></a>
+          <a href="projekty.html"><li>Projekty</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="h1Projekty">
+      <h1>
+       Tutaj Zamieszczam projekty, które zrobiłem z moją grupą.
+      </h1>
+    </div>
+   
+
+    <div id="lista_projektow">
+      <h1>
+        <ol>
+          <li>
+            Lista zadań:
+            <a target = "_blank" class="projekty" href="https://listazadanigor.glitch.me/"
+              >LINK</a
+            >
+          </li>
+          
+          <h5>
+            Mały projekt, w którym spiszesz listę swoich zadań i ją wydrukujesz
+          </h5>
+          <img id="lista_zadan" src="Grafiki\To do List.png">
+          
+          <li>
+            Strona poświęcona bezpieczeństwie w internecie:
+            <a target = "_blank" class="projekty" href="https://bezpieczenstwowsieci.glitch.me/"
+              >LINK</a>
+            
+            <h5>
+            Na tej stronie poznasz jakie niebiezpieczeństwa czyhają w internecie i jak sie przed nimi bronić.
+          </h5>
+            
+            <img id="bezpieczenstwo" src="Grafiki\Online Safety.png">
+          </li>
+          <li>
+            Gra wisielec:
+            <a target = "_blank" class="projekty" href="https://wisielecigor.glitch.me/">LINK</a>
+            <h5>
+            Gra wisielec, odgadnij hasło wpisując literki zwarte w haśle.
+          </h5>
+            <img id="wisielec" src="Grafiki\Hangman.png">
+          </li>
+        </ol>
+      </h1>
+    </div>
+    <!-- Stopka -->
+    <div class="stopka">
+      <hr />
+      Pomysł i wykonanie: Igor Szymacha
+      <p>Wszystkie prawa zastrzeżone</p>
+      <p>2024</p>
+    </div>
+  </body>
+</html>

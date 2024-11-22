@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="Grafiki\world-wide-web.png" />
+    <title>:></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- ZEGAR -->
+    <div id="clock"></div>
+
+    <script>
+      const clock = document.querySelector("#clock");
+
+      function updateClock() {
+        const date = new Date();
+        clock.textContent = date.toLocaleTimeString("en-GB", {
+          timeZone: "Europe/Paris",
+        });
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html"><li>Strona Główna</li></a>
+          <a href="o-mnie.html"><li>O mnie</li></a>
+          <a href="kontakt.html"><li>Kontakt</li></a>
+          <a href="projekty.html"><li>Projekty</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="o-mnie">
+      <h1>
+        Hej, mam na imię Igor, jestem z Krakowa i uwielbiam komputery.
+      </h1>
+    </div>
+    
+
+    <div class="3d">
+      <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@0.9.374/build/spline-viewer.js"
+      ></script>
+      <spline-viewer
+        loading-anim
+        url="https://prod.spline.design/35q-s-Ytm9qE56E4/scene.splinecode"
+      ></spline-viewer>
+    </div>
+
+    <!-- Stopka -->
+    <div class="stopka">
+      <hr />
+      Pomysł i wykonanie: Igor Szymacha
+
+      <p>Wszystkie prawa zastrzeżone</p>
+      <p>2024</p>
+    </div>
+  </body>
+</html>

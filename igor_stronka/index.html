@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Grafiki\world-wide-web.png" />
+
+    <title>:></title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    
+    <!-- ZEGAR -->
+    <div id="clock"></div>
+
+    <script>
+      const clock = document.querySelector("#clock");
+
+      function updateClock() {
+        const date = new Date();
+        clock.textContent = date.toLocaleTimeString("en-GB", {
+          timeZone: "Europe/Paris",
+        });
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  
+   <!-- MENU-HAMBURGER (zapożyczone z MIT czy cos)-->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        
+        
+
+
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html"><li>Strona Główna</li></a>
+          <a href="o-mnie.html"><li>O mnie</li></a>
+          <a href="kontakt.html"><li>Kontakt</li></a>
+         <a href="projekty.html"><li>Projekty</li></a>
+
+        </ul>
+      </div>
+    </nav>
+    <div id="wstep">
+      <h1>
+      Cześć, oto nowa wersja mojej strony i będę się starał ją powoli rozwijać
+     </h1>
+    </div>
+    
+    <img id="zdjecie" src="Grafiki\DSC01822.jpg">
+    
+    <!-- Stopka -->
+    <div class="stopka">
+      <hr />
+      Pomysł i wykonanie: Igor Szymacha
+      <p>Wszystkie prawa zastrzeżone</p>
+      <p>2024</p>
+    </div>
+  </body>
+</html>

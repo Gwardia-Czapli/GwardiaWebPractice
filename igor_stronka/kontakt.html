@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="Grafiki\world-wide-web.png" />
+    <title>:></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- ZEGAR -->
+    <div id="clock"></div>
+
+    <script>
+      const clock = document.querySelector("#clock");
+
+      function updateClock() {
+        const date = new Date();
+        clock.textContent = date.toLocaleTimeString("en-GB", {
+          timeZone: "Europe/Paris",
+        });
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+
+    <!-- MENU-HAMBURGER -->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html"><li>Strona Główna</li></a>
+          <a href="o-mnie.html"><li>O mnie</li></a>
+          <a href="kontakt.html"><li>Kontakt</li></a>
+          <a href="projekty.html"><li>Projekty</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="kontakt">
+      <h1>
+      Kontakt:
+      
+        <p>
+         <img class="logo" src="Grafiki\email.png"> szymachaigor@gmail.com
+      </p>
+      <p>
+        <img class="logo" src="Grafiki\discord.png"> igr5223
+      </p>
+    </h1>
+    </div>
+    
+
+    <!-- Stopka -->
+    <div class="stopka">
+      <hr />
+      Pomysł i wykonanie: Igor Szymacha
+
+      <p>Wszystkie prawa zastrzeżone</p>
+      <p>2024</p>
+    </div>
+  </body>
+</html>
